@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: "Rajdhani", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 1.02em;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: monospace;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .clock-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        [data-value] {
+            color: #3a3a3a;
+            /* dim gray for inactive digits */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock-container">
+        <div style="display: inline-block;">
+            <table>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td class="hour" data-value="00">00</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="01">01</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="02">02</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="03">03</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="04">04</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td class="hour" data-value="05">05</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="06">06</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="07">07</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="08">08</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="09">09</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td class="hour" data-value="10">10</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="11">11</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="12">12</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="13">13</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="14">14</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="display: inline-block;">
+            <table>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td class="hour" data-value="15">15</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="16">16</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="17">17</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="18">18</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="19">19</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td class="hour" data-value="20">20</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="21">21</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="22">22</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="23">23</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="24">24</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td class="hour" data-value="25">25</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="26">26</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="27">27</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="28">28</td>
+                            </tr>
+                            <tr>
+                                <td class="hour" data-value="29">29</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="display: inline-block;">
+            <div style="height: 100px; border: 1px solid #3a3a3a;"></div>
+        </div>
+        <div style="display: inline-block;">
+            <table>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td class="minute" data-value="30">30</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="31">31</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="32">32</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="33">33</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="34">34</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td class="minute" data-value="35">35</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="36">36</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="37">37</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="38">38</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="39">39</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td class="minute" data-value="40">40</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="41">41</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="42">42</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="43">43</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="44">44</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="display: inline-block;">
+            <table>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td class="minute" data-value="45">45</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="46">46</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="47">47</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="48">48</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="49">49</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td class="minute" data-value="50">50</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="51">51</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="52">52</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="53">53</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="54">54</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td class="minute" data-value="55">55</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="56">56</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="57">57</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="58">58</td>
+                            </tr>
+                            <tr>
+                                <td class="minute" data-value="59">59</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // 3×5 pixel font patterns
+        // Grid layout: 
+        // Row 0: 00, 05, 10
+        // Row 1: 01, 06, 11
+        // Row 2: 02, 07, 12
+        // Row 3: 03, 08, 13
+        // Row 4: 04, 09, 14
+        // Each digit is a 3×5 bitmap where # = filled, . = empty
+        const digitPatterns = {
+            '0': ['00', '05', '10', '01', '11', '02', '12', '03', '13', '04', '09', '14'], // ### / #.# / #.# / #.# / ###
+            '1': ['00', '05', '06', '07', '08', '04', '09', '14'], // ##. / .#. / .#. / .#. / ###
+            '2': ['00', '05', '10', '11', '02', '07', '12', '03', '04', '09', '14'], // ### / ..# / ### / #.. / ###
+            '3': ['00', '05', '10', '11', '02', '07', '12', '13', '04', '09', '14'], // ### / ..# / ### / ..# / ###
+            '4': ['00', '10', '01', '11', '02', '07', '12', '13', '14'], // #.# / #.# / ### / ..# / ..#
+            '5': ['00', '05', '10', '01', '02', '07', '12', '13', '04', '09', '14'], // ### / #.. / ### / ..# / ###
+            '6': ['00', '05', '10', '01', '02', '07', '12', '03', '13', '04', '09', '14'], // ### / #.. / ### / #.# / ###
+            '7': ['00', '05', '10', '11', '12', '13', '14'], // ### / ..# / ..# / ..# / ..#
+            '8': ['00', '05', '10', '01', '11', '02', '07', '12', '03', '13', '04', '09', '14'], // ### / #.# / ### / #.# / ###
+            '9': ['00', '05', '10', '01', '11', '02', '07', '12', '13', '04', '09', '14'] // ### / #.# / ### / ..# / ###
+        };
+
+
+        function highlightDigit(blockSelector, digit, blockOffset = 0, color = '#ffffff') {
+            const pattern = digitPatterns[digit];
+            if (!pattern) return;
+
+            pattern.forEach(patternValue => {
+                // Pattern values are 00-14 (for the 3x5 grid in block 1)
+                // Add block offset to map to correct block's number range
+                const numValue = parseInt(patternValue);
+                const actualValue = String(numValue + blockOffset).padStart(2, '0');
+                const element = document.querySelector(`${blockSelector}[data-value="${actualValue}"]`);
+                if (element) {
+                    element.style.color = color;
+                    element.style.fontWeight = 'bold';
+                }
+            });
+        }
+
+        function updateClock() {
+            const date = new Date();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            const seconds = date.getSeconds();
+
+            // Format with leading zeros
+            const hoursStr = String(hours).padStart(2, '0');
+            const minutesStr = String(minutes).padStart(2, '0');
+            const secondsStr = String(seconds).padStart(2, '0');
+
+            // Remove all previous highlights - reset to dim gray
+            document.querySelectorAll('[data-value]').forEach(el => {
+                el.style.color = '#3a3a3a';
+                el.style.fontWeight = '';
+            });
+
+            // Display time HH:MM across 4 blocks (white color)
+            // Block 1: First digit of hour (0-2) - uses numbers 00-14
+            highlightDigit('.hour', hoursStr[0], 0, '#ffffff');
+
+            // Block 2: Second digit of hour (0-9) - uses numbers 15-29
+            highlightDigit('.hour', hoursStr[1], 15, '#ffffff');
+
+            // Block 3: First digit of minute (0-5) - uses numbers 30-44
+            highlightDigit('.minute', minutesStr[0], 30, '#ffffff');
+
+            // Block 4: Second digit of minute (0-9) - uses numbers 45-59
+            highlightDigit('.minute', minutesStr[1], 45, '#ffffff');
+
+            // Highlight current second with orangered color
+            const matchingElements = document.querySelectorAll(`[data-value="${secondsStr}"]`);
+            matchingElements.forEach(el => {
+                // Check if this element is already part of the time display
+                const isTimeDisplay = el.style.color === 'rgb(255, 255, 255)' || el.style.color === '#ffffff';
+
+                if (isTimeDisplay) {
+                    // If already highlighted by time display, use orangered to show it's also the second
+                    el.style.color = 'orangered';
+                } else {
+                    // If not part of time display, highlight in orangered
+                    el.style.color = 'orangered';
+                    el.style.fontWeight = 'bold';
+                }
+            });
+        }
+
+        // Update immediately and then every second
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+
+</html>
