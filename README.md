@@ -79,7 +79,7 @@ Works in all modern browsers that support:
 ## File Structure
 
 ```
-clock.html          # Main HTML file with embedded CSS and JavaScript
+index.html          # Main HTML file with embedded CSS and JavaScript
 README.md           # This documentation file
 ```
 
